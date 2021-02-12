@@ -1,0 +1,367 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "who2eu-svc",
+  "url": "http://fhir.org/guides/who/svc/ConceptMap/who2eu-svc",
+  "version": "4.0.1",
+  "name": "ConceptMapWhoToEuSvc",
+  "title": "Model Mapping - WHO versus EU Smart Vaccination Certificate",
+  "status": "active",
+  "experimental": false,
+  "publisher": "Giorgio Cangioli",
+  "contact": [
+    {
+      "name": "Giorgio Cangioli",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:giorgio.cangioli@gmail.com"
+        }
+      ]
+    }
+  ],
+  "description": "Model Mapping - WHO versus EU Smart Vaccination Certificate",
+  "sourceUri": "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "targetUri": "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "group": [
+    {
+      "source": "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+      "target": "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+      "element": [
+        {
+          "code": "smartVaccinationCertificate",
+          "display": "Smart Vaccination Card",
+          "target": [
+            {
+              "code": "vaccinationCertificate",
+              "display": "EU Vaccination Certificate",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+      "target": "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+      "element": [
+        {
+          "code": "smartVaccinationCertificate.subject",
+          "display": "Header - input once",
+          "target": [
+            {
+              "code": "vaccinationCertificate.subject",
+              "display": "Person identification",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination",
+          "display": "Data needed for each vaccination event",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination",
+              "display": "Vaccination / prophylaxis information",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.metaData",
+          "display": "Certificate Metadata",
+          "target": [
+            {
+              "code": "vaccinationCertificate.metaData",
+              "display": "Certificate metadata",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+      "target": "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+      "element": [
+        {
+          "code": "smartVaccinationCertificate.subject",
+          "display": "Header - input once",
+          "target": [
+            {
+              "code": "vaccinationCertificate.subject",
+              "display": "Person identification",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.subject.fullName",
+          "display": "Name",
+          "target": [
+            {
+              "code": "vaccinationCertificate.subject.name",
+              "display": "Person name",
+              "equivalence": "relatedto",
+              "comment": "A single string in the WHO model; potentially a structured name for the EC one"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.subject.birthDate",
+          "display": "Date of birth",
+          "target": [
+            {
+              "code": "vaccinationCertificate.subject.birthDate",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.subject.identifier",
+          "display": "Unique identification",
+          "target": [
+            {
+              "code": "vaccinationCertificate.subject.identifier",
+              "display": "Person identifier",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.subject.administrativeGender",
+          "display": "Administrative Sex",
+          "target": [
+            {
+              "code": "vaccinationCertificate.subject.sex",
+              "display": "Sex",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+      "target": "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+      "element": [
+        {
+          "code": "smartVaccinationCertificate.vaccination",
+          "display": "Data needed for each vaccination event",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination",
+              "display": "Vaccination / prophylaxis information",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination.vaccineCode",
+          "display": "Vaccine or prophylaxis",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination.vaccineCode",
+              "display": "Vaccine or prophylaxis",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination.vaccineBrandName",
+          "display": "Vaccine brand",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination.vaccineProduct",
+              "display": "Vaccine medicinal product",
+              "equivalence": "wider",
+              "comment": "Brand name in the WHO model; potentially a wider description of the product for EC model (the only info conveyed is however the product name)"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination.vaccineManufacturer",
+          "display": "Vaccine manufacturer",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination.vaccineMarketingAuthorizationHolder",
+              "display": "Marketing Authorization Holder",
+              "equivalence": "unmatched",
+              "comment": "The Mnaufacturer for the WHO model; the Marketing Authorization Holder for the EC one. Are the two models using different references for the same intended concept ?"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination.vaccineBatchNumber",
+          "display": "Batch number of vaccine or prophylaxis",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination.vaccineBatchNumber",
+              "display": "Batch/lot number",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination.date",
+          "display": "Date of vaccination",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination.date",
+              "display": "Date of vaccination",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination.doseNumber",
+          "display": "Dose",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination.doseNumber",
+              "display": "Number in a series of vaccinations / doses",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination.administeringCentre",
+          "display": "Administering centre",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination.administeringCentre",
+              "display": "Administering centre",
+              "equivalence": "equivalent",
+              "comment": "Check if the information of interest is where the vaccination was done or the organization certiticating this vaccination; or the organization the health Worker/HP belong to"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination.healthWorkerSignature",
+          "display": "Signature of health worker",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination.healthProfessionalIdentification",
+              "display": "Health Professional identification",
+              "equivalence": "relatedto"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination.targetDisease",
+          "display": "Vaccinated against",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination.targetDisease",
+              "display": "Disease or agent targeted",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination.dateNextDose",
+          "display": "Due date of next dose",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination.dateNextDose",
+              "display": "Next vaccination date",
+              "equivalence": "equal"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.vaccination.countryOfVaccination",
+          "display": "Country of vaccination",
+          "target": [
+            {
+              "code": "vaccinationCertificate.vaccination.countryOfVaccination",
+              "display": "Country of vaccination",
+              "equivalence": "equal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+      "target": "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+      "element": [
+        {
+          "code": "smartVaccinationCertificate.metaData",
+          "display": "Certificate Metadata",
+          "target": [
+            {
+              "code": "vaccinationCertificate.metaData",
+              "display": "Certificate metadata",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.metaData.issuer",
+          "display": "Certificate Issuer",
+          "target": [
+            {
+              "code": "vaccinationCertificate.metaData.issuer",
+              "display": "Certificate Issuer",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.metaData.startValidity",
+          "display": "Certificate valid from",
+          "target": [
+            {
+              "code": "vaccinationCertificate.metaData.startValidity",
+              "display": "Certificate valid from",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.metaData.endValidity",
+          "display": "Certificate valid until",
+          "target": [
+            {
+              "code": "vaccinationCertificate.metaData.endValidity",
+              "display": "Certificate valid until",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.metaData.certificateId",
+          "display": "Certificate identifier",
+          "target": [
+            {
+              "code": "vaccinationCertificate.metaData.certificateId",
+              "display": "Certificate identifier",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.metaData.certificateStatus",
+          "display": "Status of certificate validity",
+          "target": [
+            {
+              "equivalence": "disjoint",
+              "comment": "no status in the EC model"
+            }
+          ]
+        },
+        {
+          "code": "smartVaccinationCertificate.metaData.certificateSchemaVersion",
+          "display": "Certificate schema version",
+          "target": [
+            {
+              "code": "vaccinationCertificate.metaData.certificateSchemaVersion",
+              "display": "Certificate schema version",
+              "equivalence": "equal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+ "name": "WhoVaccinationCertificateIg",
+ "version" : "0.0.1",  
+ "canonical" : "http://fhir.org/guides/who/svc",
+ "url" : "http://fhir.org/guides/who/svc",
+ "title" : "WHO Vaccination Certificate FHIR Implementation Guide",
+ "description": "WHO Vaccination Certificate FHIR Implementation Guide",
+ "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1",
+    "hl7.fhir.uv.ips": "dev"
+ },
+ "keywords": [
+   "COVID-19",
+   "Vaccination"
+ ],
+ "language": "en",
+ "author": "Giorgio Cangioli",
+ "maintainers": [
+   {
+     "name": "Giorgio Cangioli",
+     "email": "giorgio.cangioli@gmail.com"
+   }
+ ],
+ "license": "CC0-1.0"
+}

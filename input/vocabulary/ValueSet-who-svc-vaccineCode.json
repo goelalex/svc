@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VsWhoSvcVaccineCode",
+  "id": "who-svc-vaccineCode",
+  "title": "ICD 11 Vaccine Codes",
+  "description": "Value set inclduig all the ICD-11 vaccine codes. ",
+  "version": "0.1.0",
+  "url": "http://fhir.org/guides/who/svc/ValueSet/who-svc-vaccineCode",
+  "compose": {
+    "include": [
+      {
+        "system": "http://id.who.int/icd11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "164949870"
+          }
+        ]
+      }
+    ]
+  }
+}

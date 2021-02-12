@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://id.who.int/icd11/mms"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://id.who.int/icd11/mms"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://id.who.int/icd11/mms",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "164949870"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://id.who.int/icd11/mms"
+}
+-------------------------------------------------------------------------------------

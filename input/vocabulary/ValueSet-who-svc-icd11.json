@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VsWhoSvcICD11",
+  "id": "who-svc-icd11",
+  "title": "ICD 11 Code System",
+  "description": "Value set referring the entire ICD-11 Code Systems",
+  "version": "0.1.0",
+  "url": "http://fhir.org/guides/who/svc/ValueSet/who-svc-icd11",
+  "compose": {
+    "include": [
+      {
+        "system": "http://id.who.int/icd11/mms"
+      }
+    ]
+  }
+}

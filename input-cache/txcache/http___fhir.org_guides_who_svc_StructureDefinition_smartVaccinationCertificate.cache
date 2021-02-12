@@ -1,0 +1,251 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.subject"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.metaData"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.subject.fullName"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.subject.birthDate"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.subject.identifier"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.subject.administrativeGender"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination.vaccineCode"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination.vaccineBrandName"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination.vaccineManufacturer"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination.vaccineBatchNumber"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination.date"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination.doseNumber"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination.administeringCentre"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination.healthWorkerSignature"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination.targetDisease"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination.dateNextDose"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.vaccination.countryOfVaccination"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.metaData.issuer"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.metaData.startValidity"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.metaData.endValidity"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.metaData.certificateId"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.metaData.certificateStatus"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/smartVaccinationCertificate",
+  "code" : "smartVaccinationCertificate.metaData.certificateSchemaVersion"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------

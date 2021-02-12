@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="vaccinationCertificate"/>
+	<url value="http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate"/>
+	<name value="vaccinationCertificate"/>
+	<title value="WHO Smart Vaccination Certificate [Logical Model]"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<description value="Logical Model representing the WHO Smart Vaccination Certificate  Model."/>
+	<jurisdiction>
+		<!-- This will drive SNOMED release used -->
+		<coding>
+			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+			<code value="001"/>
+		</coding>
+	</jurisdiction>
+	<fhirVersion value="4.0.1"/>
+	<mapping>
+		<identity value="fhir-ig"/>
+		<uri value="http://fhir.org/guides/who/svc"/>
+		<name value="Who Vaccination Certificate FHIR Implementation Guide"/>
+	</mapping>
+	<kind value="logical"/>
+	<abstract value="true"/>
+	<type value="vaccinationCertificate"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+	<derivation value="specialization"/>
+	<differential>
+		<element id="vaccinationCertificate">
+			<path value="vaccinationCertificate"/>
+			<short value="Smart Vaccination Certificate"/>
+			<definition value="Smart Vaccination Certificate content"/>
+			<min value="0"/>
+			<max value="*"/>
+		</element>
+		<element id="vaccinationCertificate.subject">
+			<path value="vaccinationCertificate.subject"/>
+			<short value="Section Header - input once"/>
+			<definition value="Section Header - input once. It provides the information about the subject"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="BackboneElement"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Patient.conformsTo('http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips')"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Composition.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Composition-svc').subject"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').patient"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="ImmunizationRecommendation.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/ImmunizationRecommendation-svc').patient"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.subject.Name">
+			<path value="vaccinationCertificate.subject.Name"/>
+			<short value="Name"/>
+			<definition value="The legal full name of the vaccinated person"/>
+			<min value="1"/>
+			<max value="*"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Patient.conformsTo('http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips').name"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.subject.birthDate">
+			<path value="vaccinationCertificate.subject.birthDate"/>
+			<short value="Date of birth"/>
+			<definition value="The individual's date of birth (DOB) if known. If unknown, use given DOB for administrative purposes. The full format of DD MM YYYY is required if known."/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="date"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Patient.conformsTo('http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips').birthDate"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.subject.identifier">
+			<path value="vaccinationCertificate.subject.identifier"/>
+			<short value="Unique identification"/>
+			<definition value="Unique identifier for the vaccinated person, according to the policies applicable to each country. There can be more than one unique identifier used to link records. (e.g. national ID, health ID, immunization information system ID, medical record ID)."/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Identifier"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Patient.conformsTo('http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips').identifier"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.subject.sex">
+			<path value="vaccinationCertificate.subject.sex"/>
+			<short value="Sex"/>
+			<definition value="Documentation of a specific instance of sex information for the vaccinated person."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Patient.conformsTo('http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips').gender"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent">
+			<path value="vaccinationCertificate.vaccinationEvent"/>
+			<short value="Data needed for each vaccination event"/>
+			<definition value="Data needed for each vaccination event"/>
+			<min value="1"/>
+			<max value="*"/>
+			<type>
+				<code value="BackboneElement"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc')"/>
+			</mapping>
+			<constraint>
+				<key value="who-svc-1"/>
+				<severity value="error"/>
+				<human value="If vaccine manufacturer is not available, market authorization holder is REQUIRED."/>
+				<expression value="vaccineManufacturer.exists() or vaccineMarketingAuthorizationHolder.exists()"/>
+			</constraint>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.vaccineCode">
+			<path value="vaccinationCertificate.vaccinationEvent.vaccineCode"/>
+			<short value="Vaccine or prophylaxis"/>
+			<definition value="Generic description of the vaccine or vaccine sub-type. e.g. Covid-19 mRNA vaccine, HPV vaccine"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').vaccineCode"/>
+			</mapping>
+			<binding>
+				<strength value="required"/>
+				<valueSet value="http://fhir.org/guides/who/svc/ValueSet/who-svc-vaccineCode"/>
+			</binding>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.vaccineBrand">
+			<path value="vaccinationCertificate.vaccinationEvent.vaccineBrand"/>
+			<short value="Vaccine brand"/>
+			<definition value="The brand or trade name used to refer to the vaccination."/>
+			<min value="1"/>
+			<max value="*"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').vaccineCode.text"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.vaccineManufacturer">
+			<path value="vaccinationCertificate.vaccinationEvent.vaccineManufacturer"/>
+			<short value="Vaccine manufacturer"/>
+			<definition value="Name of the manufacturer of the vaccine. e.g. Serum institute of India, AstraZeneca. If vaccine manufacturer is not available, market authorization holder is REQUIRED."/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').manufacturer"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.vaccineMarketingAuthorizationHolder">
+			<path value="vaccinationCertificate.vaccinationEvent.vaccineMarketingAuthorizationHolder"/>
+			<short value="Vaccine market authorization holder"/>
+			<definition value="Name of the market authorization holder of the vaccination. If market authorization holder is not available, vaccine manufacturer is REQUIRED."/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').manufacturer"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.vaccineBatchNumber">
+			<path value="vaccinationCertificate.vaccinationEvent.vaccineBatchNumber"/>
+			<short value="Batch number of vaccine or prophylaxis"/>
+			<definition value="Batch number or lot number of vaccine or prophylaxis"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').lotNumber"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.dateOfVaccination">
+			<path value="vaccinationCertificate.vaccinationEvent.dateOfVaccination"/>
+			<short value="Date of vaccination"/>
+			<definition value="Date in which the vaccine was provided."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="date"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').occurrenceDatetime"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.doseNumber">
+			<path value="vaccinationCertificate.vaccinationEvent.doseNumber"/>
+			<short value="Dose number"/>
+			<definition value="Vaccine dose number"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Quantity"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').protocolApplied.doseNumber[x]"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').protocolApplied.seriesDoses[x]"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.countryOfVaccination">
+			<!-- add VOC binding ISO 3166 -->
+			<path value="vaccinationCertificate.vaccinationEvent.countryOfVaccination"/>
+			<short value="Country of vaccination"/>
+			<definition value="The country in which the individual has been vaccinated"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').location.address.country"/>
+			</mapping>
+			<binding>
+				<strength value="required"/>
+				<valueSet value="http://fhir.org/guides/who/svc/ValueSet/who-svc-countryCode"/>
+			</binding>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.administeringCentre">
+			<path value="vaccinationCertificate.vaccinationEvent.administeringCentre"/>
+			<short value="Administering centre"/>
+			<definition value="The name or identifier of the vaccination facility responsible for providing the vaccination"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').performer"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.healthWorker">
+			<path value="vaccinationCertificate.vaccinationEvent.healthWorker"/>
+			<short value="Health worker"/>
+			<definition value="Health worker"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="BackboneElement"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').performer"/>
+			</mapping>
+			<constraint>
+				<key value="who-svc-2"/>
+				<severity value="error"/>
+				<human value="The Signature of health worker is required for paper certificate; the  Health worker identification for the digital ones."/>
+				<expression value="signature.exists() or identifier.exists()"/>
+			</constraint>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.healthWorker.signature">
+			<path value="vaccinationCertificate.vaccinationEvent.healthWorker.signature"/>
+			<short value="Signature of health worker"/>
+			<definition value="REQUIRED for PAPER vaccination certificates. The health worker who provided the vaccination or the supervising clinician's hand-written signature."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Signature"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Not Mapped"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.healthWorker.identifier">
+			<path value="vaccinationCertificate.vaccinationEvent.healthWorker.identifier"/>
+			<short value="Health worker identification"/>
+			<definition value="REQUIRED for DIGITAL vaccination certificates. The unique indentifier for the health worker as determined by the member state. There can be more than one unique identifier used. (e.g. system generated ID, health profession number, cryptographic signature, or any other form of health worker unique identifier). This is to be used in lieu of a paper-based signature."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Identifier"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').performer"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.targetDisease">
+			<path value="vaccinationCertificate.vaccinationEvent.targetDisease"/>
+			<short value="Disease or agent targeted"/>
+			<definition value="Name of disease vaccinated against (e.g. COVID-19)"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Immunization.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Immunization-svc').protocolApplied.targetDisease"/>
+			</mapping>
+			<binding>
+				<strength value="required"/>
+				<valueSet value="http://fhir.org/guides/who/svc/ValueSet/who-svc-icd11"/>
+			</binding>
+		</element>
+		<element id="vaccinationCertificate.vaccinationEvent.dateNextDose">
+			<path value="vaccinationCertificate.vaccinationEvent.dateNextDose"/>
+			<short value="Due date of next dose"/>
+			<definition value="Date on which the next vaccination should be administered"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="dateTime"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="ImmunizationRecommendation.recommendation.where(dateCriterion='http://loinc.org#45354-8').value"/>
+				<!-- 45354-8 "Date next dose" or 30980-7 "Date vaccine due" -->
+			</mapping>
+		</element>
+		<!-- metadata ======
+			
+		<element id="vaccinationCertificate.metaData">
+			<path value="vaccinationCertificate.metaData"/>
+			<short value="Certificate Metadata"/>
+			<definition value="Certificate Metadata"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="BackboneElement"/>
+			</type>
+		</element>
+		<element id="vaccinationCertificate.metaData.issuer">
+			<path value="vaccinationCertificate.metaData.issuer"/>
+			<short value="Certificate Issuer"/>
+			<definition value="The authority or authorized organization that issued the vaccination certificate"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Composition.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Composition-svc').attester.party"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.metaData.startValidity">
+			<path value="vaccinationCertificate.metaData.startValidity"/>
+			<short value="Certificate valid from"/>
+			<definition value="Vaccine or prophylaxis valid from"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="dateTime"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Composition.attester.time"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Build.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Build-svc').identifier.period.start"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.metaData.endValidity">
+			<path value="vaccinationCertificate.metaData.endValidity"/>
+			<short value="Certificate valid until"/>
+			<definition value="Vaccine or prophylaxis valid until"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="dateTime"/>	
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Build.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Build-svc').identifier.period.end"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.metaData.certificateId">
+			<path value="vaccinationCertificate.metaData.certificateId"/>
+			<short value="Certificate identifier"/>
+			<definition value="Unique identifier for the vaccination certificate"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Identifier"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Build.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Build-svc').identifier"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="Composition.conformsTo('http://fhir.org/guides/who/svc/StructureDefinition/Composition-svc').identifier"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.metaData.certificateStatus">
+			<path value="vaccinationCertificate.metaData.certificateStatus"/>
+			<short value="Status of certificate validity"/>
+			<definition value="The validity status of the certificate"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="fhir-ig"/>
+				<map value="To be analyzed"/>
+			</mapping>
+		</element>
+		<element id="vaccinationCertificate.metaData.certificateSchemaVersion">
+			<path value="vaccinationCertificate.metaData.certificateSchemaVersion"/>
+			<short value="Certificate schema version"/>
+			<definition value="Version of this minimum dataset definition - currently set at 1.0.0"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Identifier"/>
+			</type>
+		</element> -->
+	</differential>
+</StructureDefinition>

@@ -1,0 +1,231 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.subject"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.vaccination"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.metaData"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.subject.name"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.subject.birthDate"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.subject.identifier"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.subject.sex"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.vaccination.vaccineCode"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.vaccination.vaccineProduct"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.vaccination.vaccineBatchNumber"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.vaccination.date"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.vaccination.doseNumber"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.vaccination.administeringCentre"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.vaccination.healthProfessionalIdentification"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.vaccination.targetDisease"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.vaccination.dateNextDose"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.vaccination.countryOfVaccination"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.metaData.issuer"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.metaData.startValidity"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.metaData.endValidity"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.metaData.certificateId"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.org/guides/who/svc/StructureDefinition/vaccinationCertificate",
+  "code" : "vaccinationCertificate.metaData.certificateSchemaVersion"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Attempt to use Terminology server when no Terminology server is available"
+}
+-------------------------------------------------------------------------------------

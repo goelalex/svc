@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VsWhoSvcCountryCode",
+  "id": "who-svc-countryCode",
+  "title": "ISO 3166 Vaccine Codes",
+  "description": "Value set inclduig all the ISO 3166 Vaccine Codes",
+  "version": "0.1.0",
+  "url": "http://fhir.org/guides/who/svc/ValueSet/who-svc-countryCode",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:iso:std:iso:3166"
+      }
+    ]
+  }
+}
