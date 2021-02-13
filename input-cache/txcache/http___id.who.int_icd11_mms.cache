@@ -28,3 +28,61 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://id.who.int/icd11/mms"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://id.who.int/icd11/mms",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "XM3KV2"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://id.who.int/icd11/mms"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://id.who.int/icd11/mms",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "XM3KV2"
+      }]
+    },
+    {
+      "system" : "http://id.who.int/icd11/mms",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "XM61M7"
+      }]
+    },
+    {
+      "system" : "http://id.who.int/icd11/mms",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "XM4W25"
+      }]
+    },
+    {
+      "system" : "http://id.who.int/icd11/mms",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "XM7C66"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://id.who.int/icd11/mms"
+}
+-------------------------------------------------------------------------------------

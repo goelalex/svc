@@ -19,9 +19,13 @@ Description: "Value set referring the entire ICD-11 Code Systems"
 ValueSet: VsWhoSvcVaccineCode
 Id: who-svc-vaccineCode
 Title: "ICD 11 Vaccine Codes"
-Description: "Value set inclduig all the ICD-11 vaccine codes. "
+Description: "Value set including all the ICD-11 vaccine codes. "
 //-------------------------------------------------------------------------------------------
-* codes from system $icd11 where concept descendent-of #164949870 "vaccines"
+* include codes from system $icd11 where concept descendent-of #XM3KV2 "Bacterial vaccines"
+* include codes from system $icd11 where concept descendent-of #XM61M7 "Viral vaccines" 
+* include codes from system $icd11 where concept descendent-of #XM4W25 "Combination vaccines"  
+* include codes from system $icd11 where concept descendent-of #XM7C66 "Bacterial and viral vaccines, combined" 
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ValueSet: VsWhoSvcCountryCode
