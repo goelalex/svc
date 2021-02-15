@@ -33,7 +33,7 @@ Title: "Composition (SVC)"
 Description: "This profile defines how to represent a vaccination certificate in FHIR by using a Composition resource"
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-* ^publisher = "Giorgio Cangioli"
+* ^publisher = "World Health Organization (WHO)"
 * ^purpose = "An International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care, comprising at least the required elements of the IPS dataset. The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. As specified in EN 17269 and ISO/DIS 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it. It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country."
 * . MS
 * . ^short = "Smart Vaccination Card composition"
@@ -130,17 +130,17 @@ Description: "This profile defines how to represent Immunizations in FHIR for bu
 
 //-------------------------------------------------------------------------------------------
 
-* vaccineCode MS
-* vaccineCode.text 0..1 MS // brandName
-* patient MS
-* occurrenceDateTime MS
+* vaccineCode 1.. MS
+* vaccineCode.text 1..1 MS // brandName
+* patient 1.. MS
+* occurrenceDateTime 1.. MS
 * location MS // check is really needed
 * location only Reference(LocationSvc)
-* manufacturer MS
-* lotNumber MS
-* performer MS
+* manufacturer 1.. MS
+* lotNumber 1.. MS
+* performer 1.. MS
 * protocolApplied.targetDisease MS
-* protocolApplied.doseNumber[x] MS
+* protocolApplied.doseNumber[x] 1.. MS
 * protocolApplied.seriesDoses[x] MS
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -184,7 +184,7 @@ Title: "Bundle (SVC)"
 Description: "This profile defines how to represent a vaccination certificate in FHIR by using a Bundle resource"
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-* ^publisher = "Giorgio Cangioli"
+* ^publisher = "World Health Organization (WHO)"
 * ^purpose = "An International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care, comprising at least the required elements of the IPS dataset. The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. As specified in EN 17269 and ISO/DIS 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it. It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country."
 * . MS
 * . ^short = "Smart Vaccination Card Bundle"

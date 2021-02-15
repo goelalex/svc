@@ -72,7 +72,7 @@
             },
             "entry": [
               {
-                "reference": "urn:uuid:c220e36c-eb67-4fc4-9ba1-2fabc52acec6"
+                "reference": "urn:uuid:95e1986e-b94d-4163-befd-e5c06f264ce6"
               },
               {
                 "reference": "urn:uuid:47524493-846a-4a26-bae2-4ab03e60f02e"
@@ -130,10 +130,10 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:c220e36c-eb67-4fc4-9ba1-2fabc52acec6",
+      "fullUrl": "urn:uuid:95e1986e-b94d-4163-befd-e5c06f264ce6",
       "resource": {
         "resourceType": "Immunization",
-        "id": "c220e36c-eb67-4fc4-9ba1-2fabc52acec6",
+        "id": "95e1986e-b94d-4163-befd-e5c06f264ce6",
         "status": "completed",
         "vaccineCode": {
           "coding": [

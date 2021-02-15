@@ -1542,3 +1542,25 @@ v: {
   "error" : "Unable to find code 1119349007 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20200731); The code \"1119349007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1119349007) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "840533007",
+  "display" : "SARS-CoV-2"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "2019-nCoV",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "840533007",
+  "display" : "SARS-CoV-2"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "2019-nCoV",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

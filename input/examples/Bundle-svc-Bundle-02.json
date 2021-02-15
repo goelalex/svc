@@ -73,6 +73,9 @@
             "entry": [
               {
                 "reference": "urn:uuid:57d581c1-950c-4fee-8347-63d8b70c03f5"
+              },
+              {
+                "reference": "urn:uuid:e79e9fc2-68ea-4226-8f9f-a8231649d466"
               }
             ]
           }
@@ -167,13 +170,57 @@
                 "coding": [
                   {
                     "code": "840533007",
-                    "system": "http://snomed.info/sct"
+                    "system": "http://snomed.info/sct",
+                    "display": "SARS-CoV-2"
                   }
                 ]
               }
             ],
             "doseNumberPositiveInt": 1,
-            "seriesDosesString": "2"
+            "seriesDosesPositiveInt": 2
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e79e9fc2-68ea-4226-8f9f-a8231649d466",
+      "resource": {
+        "resourceType": "ImmunizationRecommendation",
+        "id": "e79e9fc2-68ea-4226-8f9f-a8231649d466",
+        "patient": {
+          "reference": "urn:uuid:45598100-e07c-4c4a-a54e-561459dc4dea"
+        },
+        "date": "2020-12-02",
+        "authority": {
+          "reference": "urn:uuid:45a5c5b1-4ec1-4d60-b4b2-ff5a84a41fd7"
+        },
+        "recommendation": [
+          {
+            "forecastStatus": {
+              "coding": [
+                {
+                  "code": "due",
+                  "system": "http://terminology.hl7.org/CodeSystem/immunization-recommendation-status",
+                  "display": "The patient is due for their next vaccination"
+                }
+              ]
+            },
+            "dateCriterion": [
+              {
+                "code": {
+                  "coding": [
+                    {
+                      "code": "30980-7",
+                      "system": "http://loinc.org",
+                      "display": "Date vaccine due"
+                    }
+                  ]
+                },
+                "value": "2020-12-23"
+              }
+            ],
+            "doseNumberPositiveInt": 2,
+            "seriesDosesPositiveInt": 2
           }
         ]
       }
