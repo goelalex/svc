@@ -6,7 +6,7 @@
   "name": "ImmunizationSvc",
   "title": "Immunization (SVC)",
   "status": "active",
-  "description": "This profile defines how to represent Immunizations in FHIR for building a Smart vaccination Card.",
+  "description": "This profile defines how to represent Immunizations in FHIR for building a Smart vaccination Certificate.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

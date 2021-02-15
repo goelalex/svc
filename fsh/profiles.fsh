@@ -8,17 +8,12 @@ Alias: ips_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-r
 Alias: ips_lab_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-uv-ips
 Alias: ips_path_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-pathology-uv-ips
 Alias: ips_rad_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips
-Alias: ips_Patient = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-Alias: ips_Immunization = http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips
-//=========================
-
-Alias: $loinc = http://loinc.org
-Alias: $v3-ActClass = http://terminology.hl7.org/CodeSystem/v3-ActClass
-Alias: $clinicaldocument = http://hl7.org/fhir/StructureDefinition/clinicaldocument
-Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
 Alias: $MedicationStatement-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips
+
 Alias: $Immunization-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips
+Alias: $clinicaldocument = http://hl7.org/fhir/StructureDefinition/clinicaldocument
+Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 
 //====== Profiles =====================================
 
@@ -36,16 +31,16 @@ Description: "This profile defines how to represent a vaccination certificate in
 * ^publisher = "World Health Organization (WHO)"
 * ^purpose = "An International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care, comprising at least the required elements of the IPS dataset. The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. As specified in EN 17269 and ISO/DIS 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it. It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country."
 * . MS
-* . ^short = "Smart Vaccination Card composition"
-* . ^definition = "Smart Vaccination Card composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
+* . ^short = "Smart vaccination Certificate composition"
+* . ^definition = "Smart vaccination Certificate composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 * text MS
 * identifier MS
 * status MS
 * type only $CodeableConcept-uv-ips
 * type = $loinc#82593-5  
 * type MS
-* type ^short = "Kind of composition (\"Smart Vaccination Card\")"
-* type ^definition = "Specifies that this composition refers to a Smart Vaccination Card (Loinc \"11369-6\")"
+* type ^short = "Kind of composition (\"Smart vaccination Certificate\")"
+* type ^definition = "Specifies that this composition refers to a Smart vaccination Certificate (Loinc \"11369-6\")"
 * subject only Reference($Patient-uv-ips)
 * subject MS
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the IPS the subject is always the patient."
@@ -54,8 +49,8 @@ Description: "This profile defines how to represent a vaccination certificate in
 * author ^short = "Who and/or what authored the SVC"
 * author ^definition = "Identifies who is responsible for the information in the SVC, not necessarily who typed it in."
 * title MS
-* title ^short = "Smart Vaccination Card"
-* title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Smart Vaccination Card\" or any equivalent translation"
+* title ^short = "Smart vaccination Certificate"
+* title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Smart vaccination Certificate\" or any equivalent translation"
 * attester MS
 * attester.mode MS
 * attester.time MS
@@ -123,18 +118,18 @@ Description: "This profile defines how to represent Immunizations in FHIR for re
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  ImmunizationSvc
-Parent:   ips_Immunization
+Parent:   $Immunization-uv-ips
 Id:       Immunization-svc
 Title:    "Immunization (SVC)"
-Description: "This profile defines how to represent Immunizations in FHIR for building a Smart vaccination Card."
+Description: "This profile defines how to represent Immunizations in FHIR for building a Smart vaccination Certificate."
 
 //-------------------------------------------------------------------------------------------
 
 * vaccineCode 1.. MS
-* vaccineCode.text 1..1 MS // brandName
+* vaccineCode.text 1..1 MS // brandName; 
 * patient 1.. MS
 * occurrenceDateTime 1.. MS
-* location MS // check is really needed
+* location MS // check if it  really needed
 * location only Reference(LocationSvc)
 * manufacturer 1.. MS
 * lotNumber 1.. MS
@@ -148,7 +143,7 @@ Profile:  ImmunizationRecommendationSvc
 Parent:   ImmunizationRecommendation
 Id:       ImmunizationRecommendation-svc
 Title:    "ImmunizationRecommendation (SVC)"
-Description: "This profile defines how to represent Immunization Recommandations in FHIR for building a Smart vaccination Card."
+Description: "This profile defines how to represent Immunization Recommandations in FHIR for building a Smart vaccination Certificate."
 //-------------------------------------------------------------------------------------------
 
 * date MS
@@ -170,7 +165,7 @@ Profile:  LocationSvc
 Parent:   Location
 Id:       Location-svc
 Title:    "Location (SVC)"
-Description: "This profile defines how to represent Location in FHIR for building a Smart vaccination Card. This is used to describe optionally where the vaccination occured"
+Description: "This profile defines how to represent Location in FHIR for building a Smart vaccination Certificate. This is used to describe optionally where the vaccination occured"
 
 //-------------------------------------------------------------------------------------------
 
@@ -187,8 +182,8 @@ Description: "This profile defines how to represent a vaccination certificate in
 * ^publisher = "World Health Organization (WHO)"
 * ^purpose = "An International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care, comprising at least the required elements of the IPS dataset. The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. As specified in EN 17269 and ISO/DIS 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it. It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country."
 * . MS
-* . ^short = "Smart Vaccination Card Bundle"
-* . ^definition = "Smart Vaccination Card Bundle. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
+* . ^short = "Smart vaccination Certificate Bundle"
+* . ^definition = "Smart vaccination Certificate Bundle. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 * identifier 1.. MS
 * identifier.system = "http://hl7.eu/fhir/sid/uvci" // temporary solution
 * identifier.system ^short = "(temporary URL)" 

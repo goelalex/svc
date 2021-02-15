@@ -2,11 +2,11 @@
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
 <ImplementationGuide xmlns="http://hl7.org/fhir"
                    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<id value="ig-who-svc"/>
+	<id value="who.fhir.svc"/>
 	<!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
     <valueString value="resources-spreadsheet.xml"/>
   </extension>-->
-	<url value="http://fhir.org/guides/who/svc/ImplementationGuide/ig-who-svc"/>
+	<url value="http://fhir.org/guides/who/svc/ImplementationGuide/who.fhir.svc"/>
 	<!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
 	<version value="0.0.1"/>
 	<name value="WhoVaccinationCertificateIg"/>
@@ -58,8 +58,8 @@
 			<reference>
 				<reference value="Bundle/svc-Bundle-02"/>
 			</reference>
-			<name value="Only first dose (Immunization)"/>
-			<description value="Czech vaccination example: 1 dose"/>
+			<name value="Only first dose given (Immunization)"/>
+			<description value="Czech vaccination example: 1 dose given, second dose planned"/>
 			<exampleCanonical value="http://fhir.org/guides/who/svc/StructureDefinition/Bundle-svc"/>
 		</resource>
 		<resource>
@@ -67,7 +67,7 @@
 				<reference value="Bundle/svc-Bundle-03"/>
 			</reference>
 			<name value="Second dose not given (Immunization)"/>
-			<description value="Vaccination example: second dose not given"/>
+			<description value="Vaccination example: second dose not given (only immunization events)"/>
 			<exampleCanonical value="http://fhir.org/guides/who/svc/StructureDefinition/Bundle-svc"/>
 		</resource>
 		<resource>
@@ -75,7 +75,23 @@
 				<reference value="Bundle/svc-Bundle-04"/>
 			</reference>
 			<name value="Second dose not given (ImmunizationRecommendation)"/>
-			<description value="Vaccination example: second dose not given immunization status)"/>
+			<description value="Vaccination example: second dose not given (Immunization and ImmunizationRecommendation)"/>
+			<exampleCanonical value="http://fhir.org/guides/who/svc/StructureDefinition/Bundle-svc"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Bundle/svc-Bundle-05"/>
+			</reference>
+			<name value="Only planned vaccinations (ImmunizationRecommendation)"/>
+			<description value="Vaccination example: only planned vaccinations"/>
+			<exampleCanonical value="http://fhir.org/guides/who/svc/StructureDefinition/Bundle-svc"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Bundle/svc-Bundle-06"/>
+			</reference>
+			<name value="Second dose not given due to adverse reaction"/>
+			<description value="Vaccination example: second dose not given due to adverse reaction(Immunization and ImmunizationRecommendation)"/>
 			<exampleCanonical value="http://fhir.org/guides/who/svc/StructureDefinition/Bundle-svc"/>
 		</resource>
 		<!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's

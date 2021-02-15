@@ -18,17 +18,17 @@ Usage: #example
 * entry[1].fullUrl = "urn:uuid:2b90dd2b-2dab-4c75-9bb9-a355e07401e8"
 * entry[1].resource = Inline-Instance-for-svc-Bundle-03-2
 * entry[2].fullUrl = "urn:uuid:c220e36c-eb67-4fc4-9ba1-2fabc52acec6"
-* entry[2].resource = c220e36c-eb67-4fc4-9ba1-2fabc52acec6
+* entry[2].resource = Inline-Instance-for-svc-Bundle-03-3
 * entry[3].fullUrl = "urn:uuid:47524493-846a-4a26-bae2-4ab03e60f02e"
-* entry[3].resource = Inline-Instance-for-svc-Bundle-03-3
+* entry[3].resource = Inline-Instance-for-svc-Bundle-03-4
 * entry[4].fullUrl = "urn:uuid:45a5c5b1-4ec1-4d60-b4b2-ff5a84a41fd7"
-* entry[4].resource = Inline-Instance-for-svc-Bundle-03-4
+* entry[4].resource = Inline-Instance-for-svc-Bundle-03-5
 * entry[5].fullUrl = "urn:uuid:55a5c5b1-4ec1-4d60-b4b2-ff5a84a41fd8"
-* entry[5].resource = Inline-Instance-for-svc-Bundle-03-5
+* entry[5].resource = Inline-Instance-for-svc-Bundle-03-6
 * entry[6].fullUrl = "urn:uuid:b66c1b23-21e9-4bd0-9cd7-edd806c126de"
-* entry[6].resource = Inline-Instance-for-svc-Bundle-03-6
+* entry[6].resource = Inline-Instance-for-svc-Bundle-03-7
 * entry[7].fullUrl = "urn:uuid:d7a490a1-d267-4785-ac98-db56748827fb"
-* entry[7].resource = Inline-Instance-for-svc-Bundle-03-7
+* entry[7].resource = Inline-Instance-for-svc-Bundle-03-8
 
 
 
@@ -68,7 +68,7 @@ Usage: #inline
 * gender = #female
 * birthDate = "1997-07-28"
 
-Instance: c220e36c-eb67-4fc4-9ba1-2fabc52acec6
+Instance: Inline-Instance-for-svc-Bundle-03-3
 // OK
 InstanceOf: Immunization
 Usage: #inline
@@ -86,9 +86,9 @@ Usage: #inline
 * performer[1].actor.reference = "urn:uuid:d7a490a1-d267-4785-ac98-db56748827fb" // 
 * protocolApplied[0].targetDisease[0] = $icd-10#J12.82 "Pneumonia due to coronavirus disease 2019" // $sct#840533007 
 * protocolApplied[0].doseNumberPositiveInt = 1
-* protocolApplied[0].seriesDosesString = "2"
+* protocolApplied[0].seriesDosesPositiveInt = 2
 
-Instance: Inline-Instance-for-svc-Bundle-03-3
+Instance: Inline-Instance-for-svc-Bundle-03-4
 // OK
 InstanceOf: Immunization
 Usage: #inline
@@ -103,9 +103,9 @@ Usage: #inline
 * performer[1].actor.reference = "urn:uuid:d7a490a1-d267-4785-ac98-db56748827fb" // 
 * recorded = "2021-02-07"
 * protocolApplied[0].doseNumberPositiveInt = 2
-* protocolApplied[0].seriesDosesString = "2"
+* protocolApplied[0].seriesDosesPositiveInt = 2
 
-Instance: Inline-Instance-for-svc-Bundle-03-4
+Instance: Inline-Instance-for-svc-Bundle-03-5
 // OK
 InstanceOf: Organization
 Usage: #inline
@@ -114,7 +114,7 @@ Usage: #inline
 * identifier[0].value = "090903"
 * name = "AZ. OSPEDALIERO - UNIVERSITARIA CAREGGI"
 
-Instance: Inline-Instance-for-svc-Bundle-03-5
+Instance: Inline-Instance-for-svc-Bundle-03-6
 InstanceOf: Location
 // OK
 Usage: #inline
@@ -123,7 +123,7 @@ Usage: #inline
 * address.city = "Firenze"
 * address.country = "IT"
 
-Instance: Inline-Instance-for-svc-Bundle-03-6
+Instance: Inline-Instance-for-svc-Bundle-03-7
 // OK
 InstanceOf: Organization
 Usage: #inline
@@ -132,7 +132,7 @@ Usage: #inline
 * identifier[0].value = "090"
 * name = "Regione Toscana"
 
-Instance: Inline-Instance-for-svc-Bundle-03-7
+Instance: Inline-Instance-for-svc-Bundle-03-8
 // OK
 InstanceOf: Practitioner
 Usage: #inline

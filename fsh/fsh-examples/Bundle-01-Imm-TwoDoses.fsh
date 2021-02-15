@@ -15,8 +15,8 @@ Usage: #example
 * entry[0].resource = Inline-Instance-for-svc-Bundle-01-1
 * entry[1].fullUrl = "urn:uuid:2b90dd2b-2dab-4c75-9bb9-a355e07401e8"
 * entry[1].resource = Inline-Instance-for-svc-Bundle-01-2
-* entry[2].fullUrl = "urn:uuid:95e1986e-b94d-4163-befd-e5c06f264ce6"
-* entry[2].resource = 95e1986e-b94d-4163-befd-e5c06f264ce6
+* entry[2].fullUrl = "urn:uuid:c220e36c-eb67-4fc4-9ba1-2fabc52acec6"
+* entry[2].resource = c220e36c-eb67-4fc4-9ba1-2fabc52acec6
 * entry[3].fullUrl = "urn:uuid:47524493-846a-4a26-bae2-4ab03e60f02e"
 * entry[3].resource = Inline-Instance-for-svc-Bundle-01-3
 * entry[4].fullUrl = "urn:uuid:45a5c5b1-4ec1-4d60-b4b2-ff5a84a41fd7"
@@ -45,7 +45,7 @@ Usage: #inline
 * section[0].code = $loinc#11369-6 "Hx of Immunization"
 * section[0].text.status = #generated
 * section[0].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><thead><tr><th>Date</th><th>Product</th><th>Vaccine</th><th>Dose</th></tr></thead><tbody><tr><td>2020-12-02</td><td>Comirnaty</td><td>COVID-19 mRNA Vaccine</td><td>1/2</td></tr><tr><td>2020-12-23</td><td>Comirnaty</td><td>COVID-19 mRNA Vaccine</td><td>2/2</td></tr></tbody></table></div>"
-* section[0].entry[0].reference = "urn:uuid:95e1986e-b94d-4163-befd-e5c06f264ce6"
+* section[0].entry[0].reference = "urn:uuid:c220e36c-eb67-4fc4-9ba1-2fabc52acec6"
 * section[0].entry[1].reference = "urn:uuid:47524493-846a-4a26-bae2-4ab03e60f02e"
 
 Instance: Inline-Instance-for-svc-Bundle-01-2
@@ -66,7 +66,7 @@ Usage: #inline
 * gender = #male
 * birthDate = "2000-03-21"
 
-Instance: 95e1986e-b94d-4163-befd-e5c06f264ce6
+Instance: c220e36c-eb67-4fc4-9ba1-2fabc52acec6
 InstanceOf: Immunization
 Usage: #inline
 * status = #completed
@@ -80,7 +80,7 @@ Usage: #inline
 * performer[0].actor.display = "MUDr. Aleš Procházka"
 * protocolApplied[0].targetDisease[0] = $sct#840533007
 * protocolApplied[0].doseNumberPositiveInt = 1
-* protocolApplied[0].seriesDosesString = "2"
+* protocolApplied[0].seriesDosesPositiveInt = 2
 
 Instance: Inline-Instance-for-svc-Bundle-01-3
 InstanceOf: Immunization
@@ -98,7 +98,7 @@ Usage: #inline
 * performer[0].actor.display = "MUDr. Jan Novák"
 * protocolApplied[0].targetDisease[0] = $sct#840533007
 * protocolApplied[0].doseNumberPositiveInt = 2
-* protocolApplied[0].seriesDosesString = "2"
+* protocolApplied[0].seriesDosesPositiveInt = 2
 
 Instance: Inline-Instance-for-svc-Bundle-01-4
 InstanceOf: Organization

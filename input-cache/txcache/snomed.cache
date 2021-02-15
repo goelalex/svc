@@ -1564,3 +1564,14 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "420134006",
+  "display" : "Propensity to adverse reaction"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Propensity to adverse reactions",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
